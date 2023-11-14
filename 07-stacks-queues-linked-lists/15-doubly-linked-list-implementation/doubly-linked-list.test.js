@@ -70,7 +70,7 @@ describe('DoublyLinkedList', () => {
   });
 
   it('should print all nodes in the list', () => {
-    const spy = jest.spyOn(console, 'log');
+    const spy = vi.spyOn(console, 'log');
     list.append(100);
     list.append(200);
     list.append(300);

@@ -72,7 +72,7 @@ describe('BinarySearchTree', () => {
   });
 
   test('should print tree in-order', () => {
-    const consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {}); // Spy on console.log and mock the implementation
+    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {}); // Spy on console.log and mock the implementation
 
     const bst = new BinarySearchTree();
     bst.insert(8);

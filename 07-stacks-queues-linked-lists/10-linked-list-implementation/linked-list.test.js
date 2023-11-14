@@ -20,7 +20,7 @@ describe('LinkedList', () => {
 
   describe('printAll', () => {
     test('should print all nodes in the list', () => {
-      const consoleSpy = jest.spyOn(console, 'log');
+      const consoleSpy = vi.spyOn(console, 'log');
 
       linkedList.add('A');
       linkedList.add('B');

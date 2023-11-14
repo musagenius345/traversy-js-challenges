@@ -281,7 +281,7 @@ describe('HashTable', () => {
   });
 
   test('Print the contents of the hash table', () => {
-    const consoleSpy = jest.spyOn(console, 'log');
+    const consoleSpy = vi.spyOn(console, 'log');
     hashTable.set('firstName', 'John');
     hashTable.set('lastName', 'Smith');
     hashTable.set('age', 30);

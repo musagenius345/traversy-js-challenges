@@ -1,4 +1,4 @@
-const uniqueChar = require('../06-are-all-chars-unique/are-all-chars-unique.js')
+// const uniqueChar = require('../06-are-all-chars-unique/are-all-chars-unique.js')
 const countOccurence = require('../../01-basic-challenges-1/04-count-occurrences/count-occurrences.js')
 /**
      * Returns the first non-repeating character in a string.
@@ -7,8 +7,8 @@ const countOccurence = require('../../01-basic-challenges-1/04-count-occurrences
   characters.
      */
 function findFirstNonRepeatingCharacter(str) {
-  if(uniqueChar(str)) return null
-
+  // if(uniqueChar(str)) return null
+  let char = ''
   const map = new Map()
 
   for(let i = 0; i < str.length; i++){
@@ -16,9 +16,14 @@ function findFirstNonRepeatingCharacter(str) {
     map.set(str[i], count)
   }
 
-  for (const val of map){
-    if(map.get(val) === 1) return val
-  } 
+  for (const [key, val] of map){
+     if(val === 1){
+      char = key
+      break
+    }
+  }
+
+  return char ? char : null
 }
 
 module.exports = findFirstNonRepeatingCharacter;
